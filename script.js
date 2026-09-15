@@ -1,58 +1,48 @@
 /* =========================================================
-   BRIGHTLEARN
-   script.js
+   BRIGHTLEARN - JAVASCRIPT
    Quality Education Website
-   ========================================================= */
+========================================================= */
 
 
 /* =========================================================
    QUIZ DATA
-   ========================================================= */
+========================================================= */
 
 const quizData = {
 
-    /* =====================================================
-       COMPUTER SCIENCE
-       ===================================================== */
-
     cs: {
         name: "Computer Science",
-
         questions: [
-
             {
                 q: "What does CPU stand for?",
                 options: [
                     "Central Processing Unit",
                     "Computer Personal Unit",
                     "Central Program Utility",
-                    "Computer Processing Unit"
+                    "Computer Processing User"
                 ],
                 answer: 0
             },
-
             {
                 q: "Which language is used to structure web pages?",
                 options: [
                     "HTML",
                     "CSS",
-                    "JavaScript",
-                    "Python"
+                    "Python",
+                    "SQL"
                 ],
                 answer: 0
             },
-
             {
-                q: "Which language is mainly used to style web pages?",
+                q: "Which technology is mainly used to style web pages?",
                 options: [
                     "HTML",
                     "CSS",
                     "Java",
-                    "Python"
+                    "SQL"
                 ],
                 answer: 1
             },
-
             {
                 q: "Which language is commonly used to add interactivity to web pages?",
                 options: [
@@ -63,31 +53,28 @@ const quizData = {
                 ],
                 answer: 2
             },
-
             {
                 q: "What does RAM stand for?",
                 options: [
                     "Random Access Memory",
-                    "Read Access Memory",
+                    "Read Access Machine",
                     "Rapid Application Memory",
                     "Random Application Module"
                 ],
                 answer: 0
             },
-
             {
-                q: "Which device is used to enter text into a computer?",
+                q: "Which device is mainly used to enter text into a computer?",
                 options: [
                     "Monitor",
                     "Keyboard",
-                    "Printer",
-                    "Speaker"
+                    "Speaker",
+                    "Printer"
                 ],
                 answer: 1
             },
-
             {
-                q: "Which device displays the output from a computer?",
+                q: "Which device displays visual output from a computer?",
                 options: [
                     "Keyboard",
                     "Mouse",
@@ -96,40 +83,36 @@ const quizData = {
                 ],
                 answer: 2
             },
-
             {
                 q: "What does URL stand for?",
                 options: [
                     "Uniform Resource Locator",
-                    "Universal Resource Link",
-                    "Uniform Reference Link",
-                    "Universal Reference Locator"
+                    "Universal Read Link",
+                    "User Resource Link",
+                    "Uniform Read Location"
                 ],
                 answer: 0
             },
-
             {
-                q: "Which of the following is an operating system?",
+                q: "Which one is an operating system?",
                 options: [
                     "Windows",
                     "HTML",
-                    "Google",
-                    "Python"
+                    "CSS",
+                    "JavaScript"
                 ],
                 answer: 0
             },
-
             {
                 q: "Which device is commonly used for permanent data storage?",
                 options: [
                     "RAM",
-                    "Hard Disk",
                     "Cache",
+                    "Hard Disk",
                     "Register"
                 ],
-                answer: 1
+                answer: 2
             },
-
             {
                 q: "What does WWW stand for?",
                 options: [
@@ -140,7 +123,6 @@ const quizData = {
                 ],
                 answer: 0
             },
-
             {
                 q: "Which data structure follows FIFO?",
                 options: [
@@ -151,7 +133,6 @@ const quizData = {
                 ],
                 answer: 1
             },
-
             {
                 q: "Which data structure follows LIFO?",
                 options: [
@@ -162,25 +143,23 @@ const quizData = {
                 ],
                 answer: 2
             },
-
             {
                 q: "Which symbol is commonly used for a single-line comment in JavaScript?",
                 options: [
                     "//",
                     "##",
-                    "<!-- -->",
-                    "/* */"
+                    "<!--",
+                    "**"
                 ],
                 answer: 0
             },
-
             {
-                q: "Which of the following is a programming language?",
+                q: "Which one is a programming language?",
                 options: [
                     "Python",
                     "HTML",
-                    "CSS",
-                    "HTTP"
+                    "HTTP",
+                    "URL"
                 ],
                 answer: 0
             }
@@ -188,353 +167,168 @@ const quizData = {
     },
 
 
-    /* =====================================================
-       MATHEMATICS
-       ===================================================== */
-
     math: {
         name: "Mathematics",
-
         questions: [
-
             {
                 q: "What is 5 + 7?",
-                options: [
-                    "10",
-                    "11",
-                    "12",
-                    "13"
-                ],
+                options: ["10", "11", "12", "13"],
                 answer: 2
             },
-
             {
                 q: "What is 10 × 5?",
-                options: [
-                    "40",
-                    "50",
-                    "60",
-                    "55"
-                ],
+                options: ["40", "50", "60", "55"],
                 answer: 1
             },
-
             {
                 q: "What is 100 ÷ 10?",
-                options: [
-                    "5",
-                    "10",
-                    "20",
-                    "15"
-                ],
+                options: ["5", "10", "15", "20"],
                 answer: 1
             },
-
             {
                 q: "What is 6²?",
-                options: [
-                    "12",
-                    "18",
-                    "36",
-                    "42"
-                ],
-                answer: 2
+                options: ["12", "18", "30", "36"],
+                answer: 3
             },
-
             {
                 q: "What is √81?",
-                options: [
-                    "7",
-                    "8",
-                    "9",
-                    "10"
-                ],
+                options: ["7", "8", "9", "10"],
                 answer: 2
             },
-
             {
                 q: "What is 15 − 8?",
-                options: [
-                    "5",
-                    "6",
-                    "7",
-                    "8"
-                ],
+                options: ["5", "6", "7", "8"],
                 answer: 2
             },
-
             {
                 q: "What is 25% of 100?",
-                options: [
-                    "20",
-                    "25",
-                    "30",
-                    "50"
-                ],
-                answer: 1
+                options: ["15", "20", "25", "30"],
+                answer: 2
             },
-
             {
                 q: "How many sides does a triangle have?",
-                options: [
-                    "2",
-                    "3",
-                    "4",
-                    "5"
-                ],
+                options: ["2", "3", "4", "5"],
                 answer: 1
             },
-
             {
                 q: "What is 2³?",
-                options: [
-                    "6",
-                    "8",
-                    "9",
-                    "12"
-                ],
+                options: ["6", "8", "9", "12"],
                 answer: 1
             },
-
             {
                 q: "What is 9 × 9?",
-                options: [
-                    "72",
-                    "81",
-                    "90",
-                    "99"
-                ],
+                options: ["72", "81", "90", "99"],
                 answer: 1
             },
-
             {
                 q: "What is the perimeter of a square with side 5 cm?",
-                options: [
-                    "10 cm",
-                    "15 cm",
-                    "20 cm",
-                    "25 cm"
-                ],
+                options: ["10 cm", "15 cm", "20 cm", "25 cm"],
                 answer: 2
             },
-
             {
                 q: "What is 1/2 in decimal form?",
-                options: [
-                    "0.2",
-                    "0.5",
-                    "1.5",
-                    "2"
-                ],
-                answer: 1
-            },
-
-            {
-                q: "What comes next: 2, 4, 6, 8, ___?",
-                options: [
-                    "9",
-                    "10",
-                    "11",
-                    "12"
-                ],
-                answer: 1
-            },
-
-            {
-                q: "What is a right angle?",
-                options: [
-                    "45°",
-                    "60°",
-                    "90°",
-                    "180°"
-                ],
+                options: ["0.2", "0.25", "0.5", "1.5"],
                 answer: 2
             },
-
+            {
+                q: "What is the next number: 2, 4, 6, 8, ___?",
+                options: ["9", "10", "11", "12"],
+                answer: 1
+            },
+            {
+                q: "What is a right angle?",
+                options: ["45°", "60°", "90°", "180°"],
+                answer: 2
+            },
             {
                 q: "What is 20 + 30 + 10?",
-                options: [
-                    "50",
-                    "60",
-                    "70",
-                    "80"
-                ],
+                options: ["50", "60", "70", "80"],
                 answer: 1
             }
         ]
     },
 
 
-    /* =====================================================
-       SCIENCE
-       ===================================================== */
-
     science: {
         name: "Science",
-
         questions: [
-
             {
                 q: "Which planet is known as the Red Planet?",
-                options: [
-                    "Earth",
-                    "Mars",
-                    "Jupiter",
-                    "Venus"
-                ],
+                options: ["Earth", "Mars", "Venus", "Jupiter"],
                 answer: 1
             },
-
             {
-                q: "Which gas is mainly needed for breathing?",
-                options: [
-                    "Carbon dioxide",
-                    "Oxygen",
-                    "Nitrogen",
-                    "Hydrogen"
-                ],
-                answer: 1
+                q: "Which gas do humans need for breathing?",
+                options: ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+                answer: 0
             },
-
             {
                 q: "What is the main source of energy for Earth?",
-                options: [
-                    "Moon",
-                    "Sun",
-                    "Wind",
-                    "Water"
-                ],
+                options: ["Moon", "Sun", "Wind", "Water"],
                 answer: 1
             },
-
             {
-                q: "What is H₂O?",
-                options: [
-                    "Oxygen",
-                    "Hydrogen",
-                    "Water",
-                    "Carbon dioxide"
-                ],
-                answer: 2
+                q: "What is H₂O commonly known as?",
+                options: ["Salt", "Water", "Oxygen", "Hydrogen"],
+                answer: 1
             },
-
             {
                 q: "Which organ pumps blood through the body?",
-                options: [
-                    "Lungs",
-                    "Brain",
-                    "Heart",
-                    "Kidney"
-                ],
+                options: ["Lungs", "Brain", "Heart", "Kidney"],
                 answer: 2
             },
-
             {
                 q: "Which part of a plant absorbs water from the soil?",
-                options: [
-                    "Leaves",
-                    "Flowers",
-                    "Roots",
-                    "Stem"
-                ],
+                options: ["Leaf", "Flower", "Root", "Stem"],
                 answer: 2
             },
-
             {
                 q: "Which gas is used by plants during photosynthesis?",
-                options: [
-                    "Oxygen",
-                    "Carbon dioxide",
-                    "Hydrogen",
-                    "Nitrogen"
-                ],
+                options: ["Oxygen", "Carbon dioxide", "Hydrogen", "Helium"],
                 answer: 1
             },
-
             {
-                q: "Which force pulls objects toward Earth?",
-                options: [
-                    "Friction",
-                    "Gravity",
-                    "Magnetism",
-                    "Pressure"
-                ],
-                answer: 1
+                q: "What force pulls objects toward Earth?",
+                options: ["Magnetism", "Friction", "Gravity", "Electricity"],
+                answer: 2
             },
-
             {
                 q: "Which is the largest planet in our solar system?",
-                options: [
-                    "Earth",
-                    "Saturn",
-                    "Jupiter",
-                    "Mars"
-                ],
+                options: ["Earth", "Mars", "Jupiter", "Venus"],
                 answer: 2
             },
-
             {
                 q: "Which state of matter has a fixed shape?",
-                options: [
-                    "Liquid",
-                    "Gas",
-                    "Solid",
-                    "Plasma"
-                ],
+                options: ["Liquid", "Gas", "Solid", "Plasma"],
                 answer: 2
             },
-
             {
                 q: "Which organ is mainly used for breathing?",
-                options: [
-                    "Heart",
-                    "Lungs",
-                    "Kidney",
-                    "Stomach"
-                ],
+                options: ["Heart", "Lungs", "Stomach", "Brain"],
                 answer: 1
             },
-
             {
                 q: "What is Earth's natural satellite?",
-                options: [
-                    "Sun",
-                    "Mars",
-                    "Moon",
-                    "Venus"
-                ],
+                options: ["Sun", "Mars", "Moon", "Venus"],
                 answer: 2
             },
-
             {
                 q: "Which vitamin is produced in the body with the help of sunlight?",
-                options: [
-                    "Vitamin A",
-                    "Vitamin B",
-                    "Vitamin C",
-                    "Vitamin D"
-                ],
+                options: ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
                 answer: 3
             },
-
             {
                 q: "Which material is attracted by a magnet?",
-                options: [
-                    "Wood",
-                    "Plastic",
-                    "Iron",
-                    "Glass"
-                ],
+                options: ["Wood", "Plastic", "Iron", "Glass"],
                 answer: 2
             },
-
             {
-                q: "What is the process by which plants make their food?",
+                q: "What is the process by which green plants make their food?",
                 options: [
                     "Respiration",
                     "Photosynthesis",
                     "Digestion",
-                    "Transpiration"
+                    "Evaporation"
                 ],
                 answer: 1
             }
@@ -542,48 +336,39 @@ const quizData = {
     },
 
 
-    /* =====================================================
-       COMMUNICATION
-       ===================================================== */
-
     communication: {
         name: "Communication",
-
         questions: [
-
             {
                 q: "What is communication?",
                 options: [
                     "Exchange of information",
                     "Only writing",
                     "Only speaking",
-                    "Only listening"
+                    "Reading a book"
                 ],
                 answer: 0
             },
-
             {
                 q: "Which is an example of verbal communication?",
                 options: [
                     "Speaking",
                     "Facial expression",
-                    "Eye contact",
-                    "Body movement"
+                    "Posture",
+                    "Eye contact"
                 ],
                 answer: 0
             },
-
             {
                 q: "Which is an example of non-verbal communication?",
                 options: [
-                    "Email",
                     "Speaking",
+                    "Writing",
                     "Facial expression",
-                    "Letter"
+                    "Email"
                 ],
                 answer: 2
             },
-
             {
                 q: "What is active listening?",
                 options: [
@@ -594,42 +379,38 @@ const quizData = {
                 ],
                 answer: 1
             },
-
             {
                 q: "Which quality is important for effective communication?",
                 options: [
                     "Confusion",
                     "Clarity",
                     "Silence",
-                    "Anger"
+                    "Distraction"
                 ],
                 answer: 1
             },
-
             {
                 q: "A good message should be:",
                 options: [
                     "Confusing",
-                    "Long and unclear",
+                    "Very unclear",
                     "Clear",
                     "Incomplete"
                 ],
                 answer: 2
             },
-
             {
                 q: "Which is an example of written communication?",
                 options: [
                     "Email",
-                    "Facial expression",
+                    "Hand gesture",
                     "Eye contact",
-                    "Gesture"
+                    "Facial expression"
                 ],
                 answer: 0
             },
-
             {
-                q: "What does feedback tell us?",
+                q: "What does feedback help us understand?",
                 options: [
                     "Whether the message was understood",
                     "The weather",
@@ -638,398 +419,397 @@ const quizData = {
                 ],
                 answer: 0
             },
-
             {
-                q: "Which quality improves communication?",
+                q: "Which quality supports good communication?",
                 options: [
                     "Disrespect",
-                    "Confusion",
+                    "Anger",
                     "Respect",
-                    "Ignoring"
+                    "Confusion"
                 ],
                 answer: 2
             },
-
             {
                 q: "Body language is a form of:",
                 options: [
-                    "Written communication",
                     "Non-verbal communication",
+                    "Written communication",
                     "Programming",
                     "Mathematics"
                 ],
-                answer: 1
+                answer: 0
             },
-
             {
-                q: "Which is important during a presentation?",
+                q: "Which is useful during a presentation?",
                 options: [
-                    "Avoiding the audience",
+                    "Avoiding everyone",
                     "Eye contact",
-                    "Speaking very quietly",
-                    "Ignoring questions"
+                    "Speaking too quietly",
+                    "Ignoring the audience"
                 ],
                 answer: 1
             },
-
             {
-                q: "What should you do if you do not understand something?",
+                q: "What should you do if you do not understand a message?",
                 options: [
                     "Ignore it",
-                    "Leave immediately",
+                    "Guess the meaning",
                     "Ask for clarification",
-                    "Change the topic"
+                    "Leave immediately"
                 ],
                 answer: 2
             },
-
             {
                 q: "Which is suitable for sending an urgent message?",
                 options: [
                     "Direct speaking",
-                    "Waiting several days",
-                    "Ignoring the message",
-                    "No communication"
+                    "Waiting silently",
+                    "Ignoring the person",
+                    "Changing the topic"
                 ],
                 answer: 0
             },
-
             {
                 q: "Which is an important part of good communication?",
                 options: [
                     "Listening",
-                    "Ignoring",
                     "Interrupting",
-                    "Confusing"
+                    "Ignoring",
+                    "Arguing"
                 ],
                 answer: 0
             },
-
             {
                 q: "What can improve communication confidence?",
                 options: [
                     "Clear expression of ideas",
                     "Avoiding communication",
-                    "Speaking unclearly",
+                    "Speaking without understanding",
                     "Ignoring feedback"
                 ],
                 answer: 0
             }
         ]
     }
+
 };
 
 
 /* =========================================================
-   QUIZ TEXT / LANGUAGES
-   ========================================================= */
+   LANGUAGE TRANSLATIONS
+========================================================= */
 
-const quizText = {
+const translations = {
 
     en: {
-        select: "Select Subject",
-        submit: "Submit Quiz",
-        score: "Your Score",
-        completed: "Quiz Completed!",
-        unanswered: "Please answer all questions before submitting."
+        heroSubtitle: "Learning made simple, accessible and engaging.",
+        heroDescription:
+            "BrightLearn is a student-friendly digital learning platform that provides useful resources, courses, quizzes and progress tracking to support quality education.",
+        explore: "Explore Courses",
+        learnMore: "Learn More"
     },
 
     gu: {
-        select: "વિષય પસંદ કરો",
-        submit: "ક્વિઝ સબમિટ કરો",
-        score: "તમારો સ્કોર",
-        completed: "ક્વિઝ પૂર્ણ થઈ!",
-        unanswered: "સબમિટ કરતા પહેલા બધા પ્રશ્નોના જવાબ આપો."
+        heroSubtitle: "શિક્ષણને સરળ, સુલભ અને રસપ્રદ બનાવ્યું છે.",
+        heroDescription:
+            "BrightLearn એક વિદ્યાર્થી-મૈત્રીપૂર્ણ ડિજિટલ લર્નિંગ પ્લેટફોર્મ છે, જે ગુણવત્તાયુક્ત શિક્ષણ માટે સંસાધનો, અભ્યાસક્રમો, ક્વિઝ અને પ્રગતિ ટ્રેકિંગ આપે છે.",
+        explore: "કોર્સ જુઓ",
+        learnMore: "વધુ જાણો"
     },
 
     hi: {
-        select: "विषय चुनें",
-        submit: "क्विज़ जमा करें",
-        score: "आपका स्कोर",
-        completed: "क्विज़ पूरा हुआ!",
-        unanswered: "सबमिट करने से पहले सभी प्रश्नों के उत्तर दें।"
+        heroSubtitle: "सीखना सरल, सुलभ और रोचक बनाया गया है।",
+        heroDescription:
+            "BrightLearn एक विद्यार्थी-अनुकूल डिजिटल लर्निंग प्लेटफॉर्म है जो गुणवत्तापूर्ण शिक्षा के लिए संसाधन, पाठ्यक्रम, क्विज़ और प्रगति ट्रैकिंग प्रदान करता है।",
+        explore: "कोर्स देखें",
+        learnMore: "और जानें"
     },
 
     mr: {
-        select: "विषय निवडा",
-        submit: "क्विझ सबमिट करा",
-        score: "तुमचा स्कोअर",
-        completed: "क्विझ पूर्ण झाला!",
-        unanswered: "सबमिट करण्यापूर्वी सर्व प्रश्नांची उत्तरे द्या."
+        heroSubtitle: "शिकणे सोपे, सुलभ आणि मनोरंजक बनवले आहे.",
+        heroDescription:
+            "BrightLearn हे विद्यार्थ्यांसाठी अनुकूल डिजिटल शिक्षण प्लॅटफॉर्म आहे, जे गुणवत्तापूर्ण शिक्षणासाठी संसाधने, अभ्यासक्रम, प्रश्नमंजुषा आणि प्रगती ट्रॅकिंग देते.",
+        explore: "कोर्स पहा",
+        learnMore: "अधिक जाणून घ्या"
     },
 
     bn: {
-        select: "বিষয় নির্বাচন করুন",
-        submit: "কুইজ জমা দিন",
-        score: "আপনার স্কোর",
-        completed: "কুইজ সম্পন্ন হয়েছে!",
-        unanswered: "জমা দেওয়ার আগে সব প্রশ্নের উত্তর দিন।"
+        heroSubtitle: "শেখাকে সহজ, সহজলভ্য এবং আকর্ষণীয় করা হয়েছে।",
+        heroDescription:
+            "BrightLearn একটি শিক্ষার্থী-বান্ধব ডিজিটাল লার্নিং প্ল্যাটফর্ম, যা মানসম্মত শিক্ষার জন্য রিসোর্স, কোর্স, কুইজ এবং অগ্রগতি ট্র্যাকিং প্রদান করে।",
+        explore: "কোর্স দেখুন",
+        learnMore: "আরও জানুন"
     },
 
     ta: {
-        select: "பாடத்தைத் தேர்ந்தெடுக்கவும்",
-        submit: "வினாடி வினாவை சமர்ப்பிக்கவும்",
-        score: "உங்கள் மதிப்பெண்",
-        completed: "வினாடி வினா முடிந்தது!",
-        unanswered: "சமர்ப்பிக்கும் முன் அனைத்து கேள்விகளுக்கும் பதிலளிக்கவும்."
+        heroSubtitle: "கற்றலை எளிமையாகவும், அணுகக்கூடியதாகவும், சுவாரஸ்யமாகவும் மாற்றுகிறது.",
+        heroDescription:
+            "BrightLearn என்பது மாணவர்களுக்கு ஏற்ற டிஜிட்டல் கற்றல் தளமாகும். இது தரமான கல்விக்கான வளங்கள், பாடங்கள், வினாடி வினாக்கள் மற்றும் முன்னேற்ற கண்காணிப்பை வழங்குகிறது.",
+        explore: "பாடங்களை பார்க்க",
+        learnMore: "மேலும் அறிக"
     }
+
 };
 
 
 /* =========================================================
-   CURRENT LANGUAGE
-   ========================================================= */
+   PROGRESS STORAGE
+========================================================= */
 
-let currentLanguage =
-    localStorage.getItem("brightLearnLanguage") || "en";
+const STORAGE_KEY = "brightLearnQuizProgress";
+
+let progressData = loadProgress();
+
+
+function loadProgress() {
+
+    const defaultData = {
+        cs: {
+            completed: false,
+            score: 0
+        },
+        math: {
+            completed: false,
+            score: 0
+        },
+        science: {
+            completed: false,
+            score: 0
+        },
+        communication: {
+            completed: false,
+            score: 0
+        }
+    };
+
+    try {
+
+        const saved = localStorage.getItem(STORAGE_KEY);
+
+        if (!saved) {
+            return defaultData;
+        }
+
+        const parsed = JSON.parse(saved);
+
+        return {
+            cs: {
+                completed: Boolean(parsed.cs?.completed),
+                score: Number(parsed.cs?.score) || 0
+            },
+
+            math: {
+                completed: Boolean(parsed.math?.completed),
+                score: Number(parsed.math?.score) || 0
+            },
+
+            science: {
+                completed: Boolean(parsed.science?.completed),
+                score: Number(parsed.science?.score) || 0
+            },
+
+            communication: {
+                completed: Boolean(parsed.communication?.completed),
+                score: Number(parsed.communication?.score) || 0
+            }
+        };
+
+    } catch (error) {
+
+        console.error("Progress loading error:", error);
+
+        return defaultData;
+    }
+}
+
+
+function saveProgress() {
+
+    try {
+
+        localStorage.setItem(
+            STORAGE_KEY,
+            JSON.stringify(progressData)
+        );
+
+    } catch (error) {
+
+        console.error("Progress saving error:", error);
+
+    }
+}
 
 
 /* =========================================================
-   GENERATE QUIZZES
-   ========================================================= */
+   CREATE QUIZZES
+========================================================= */
 
-function generateAllQuizzes() {
+function createAllQuizzes() {
 
-    const subjects = [
-        "cs",
-        "math",
-        "science",
-        "communication"
-    ];
+    Object.keys(quizData).forEach(function(subject) {
 
+        const container = document.getElementById(
+            `questions-${subject}`
+        );
 
-    subjects.forEach(function(subject) {
-
-        const quizContainer =
-            document.getElementById("quiz-" + subject);
-
-
-        if (!quizContainer) {
+        if (!container) {
             return;
         }
 
+        container.innerHTML = "";
 
-        const data = quizData[subject];
+        quizData[subject].questions.forEach(
+            function(question, index) {
 
+                const questionBox =
+                    document.createElement("div");
 
-        /* Clear old/static questions */
-        quizContainer.innerHTML = "";
+                questionBox.className = "quiz-question";
 
+                let optionsHTML = "";
 
-        /* Subject title */
-        const title =
-            document.createElement("h3");
+                question.options.forEach(
+                    function(option, optionIndex) {
 
-        title.className = "quiz-title";
-        title.textContent = data.name;
+                        optionsHTML += `
+                            <label class="quiz-option">
+                                <input
+                                    type="radio"
+                                    name="${subject}-q${index}"
+                                    value="${optionIndex}"
+                                >
+                                <span>${escapeHTML(option)}</span>
+                            </label>
+                        `;
 
-        quizContainer.appendChild(title);
+                    }
+                );
 
+                questionBox.innerHTML = `
+                    <h4>
+                        ${index + 1}. ${escapeHTML(question.q)}
+                    </h4>
 
-        /* Questions */
-        data.questions.forEach(function(item, index) {
+                    <div class="quiz-options">
+                        ${optionsHTML}
+                    </div>
+                `;
 
-            const questionBox =
-                document.createElement("div");
+                container.appendChild(questionBox);
 
-            questionBox.className = "question";
-
-
-            /* Store correct answer */
-            questionBox.dataset.answer =
-                item.answer;
-
-
-            /* Question */
-            const questionTitle =
-                document.createElement("h4");
-
-            questionTitle.textContent =
-                (index + 1) + ". " + item.q;
-
-            questionBox.appendChild(
-                questionTitle
-            );
-
-
-            /* Options */
-            item.options.forEach(function(option, optionIndex) {
-
-                const label =
-                    document.createElement("label");
-
-                label.className =
-                    "quiz-option";
-
-
-                const radio =
-                    document.createElement("input");
-
-                radio.type = "radio";
-
-                radio.name =
-                    subject + "-question-" + index;
-
-                radio.value =
-                    optionIndex;
-
-
-                label.appendChild(radio);
-
-
-                const optionText =
-                    document.createTextNode(
-                        " " + option
-                    );
-
-                label.appendChild(optionText);
-
-
-                questionBox.appendChild(label);
-            });
-
-
-            quizContainer.appendChild(
-                questionBox
-            );
-        });
-
-
-        /* =========================================
-           SUBMIT BUTTON
-           ========================================= */
-
-        const submitButton =
-            document.createElement("button");
-
-        submitButton.type = "button";
-
-        submitButton.className =
-            "quiz-submit";
-
-        submitButton.textContent =
-            quizText[currentLanguage].submit;
-
-
-        submitButton.addEventListener(
-            "click",
-            function() {
-                submitQuiz(subject);
             }
         );
 
-
-        quizContainer.appendChild(
-            submitButton
-        );
-
-
-        /* =========================================
-           RESULT AREA
-           ========================================= */
-
-        const result =
-            document.createElement("div");
-
-        result.className =
-            "quiz-result";
-
-        result.id =
-            "result-" + subject;
-
-
-        quizContainer.appendChild(
-            result
-        );
     });
 
+}
 
-    /* Show Computer Science initially */
-    showSelectedQuiz("cs");
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHTML(text) {
+
+    const div = document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
 }
 
 
 /* =========================================================
    SHOW SELECTED QUIZ
-   ========================================================= */
+========================================================= */
 
 function showSelectedQuiz(subject) {
 
-    const quizzes =
-        document.querySelectorAll(
-            ".quiz-subject"
-        );
+    const emptyMessage =
+        document.getElementById("quiz-empty");
 
+    const allQuizzes =
+        document.querySelectorAll(".quiz-subject");
 
-    quizzes.forEach(function(quiz) {
+    const result =
+        document.getElementById("quiz-result");
 
-        quiz.style.display = "none";
+    allQuizzes.forEach(function(quiz) {
+
+        quiz.classList.remove("active");
+
     });
 
+    result.classList.remove("show");
+    result.textContent = "";
+
+    if (!subject) {
+
+        emptyMessage.style.display = "block";
+
+        return;
+    }
+
+    emptyMessage.style.display = "none";
 
     const selectedQuiz =
-        document.getElementById(
-            "quiz-" + subject
-        );
-
+        document.getElementById(`quiz-${subject}`);
 
     if (selectedQuiz) {
 
-        selectedQuiz.style.display =
-            "block";
+        selectedQuiz.classList.add("active");
+
     }
+
 }
 
 
 /* =========================================================
-   SELECT SUBJECT
-   ========================================================= */
+   START COURSE
+========================================================= */
 
-function selectQuizSubject(subject) {
+function startCourse(subject) {
 
-    if (!subject) {
+    const selector =
+        document.getElementById("quiz-subject");
+
+    if (!selector) {
         return;
     }
 
+    selector.value = subject;
 
     showSelectedQuiz(subject);
+
+    document.getElementById("quiz").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
 }
 
 
 /* =========================================================
    SUBMIT QUIZ
-   ========================================================= */
+========================================================= */
 
-function submitQuiz(subject) {
+function submitQuiz(event, subject) {
 
-    const quiz =
-        document.getElementById(
-            "quiz-" + subject
-        );
-
-
-    if (!quiz) {
-        return;
-    }
-
+    event.preventDefault();
 
     const questions =
-        quiz.querySelectorAll(
-            ".question"
-        );
-
+        quizData[subject].questions;
 
     let score = 0;
+
     let unanswered = 0;
 
-
-    questions.forEach(function(question) {
+    questions.forEach(function(question, index) {
 
         const selected =
-            question.querySelector(
-                'input[type="radio"]:checked'
+            document.querySelector(
+                `input[name="${subject}-q${index}"]:checked`
             );
-
 
         if (!selected) {
 
@@ -1038,102 +818,87 @@ function submitQuiz(subject) {
             return;
         }
 
+        const selectedAnswer =
+            Number(selected.value);
 
-        const correctAnswer =
-            Number(
-                question.dataset.answer
-            );
-
-
-        if (
-            Number(selected.value) ===
-            correctAnswer
-        ) {
+        if (selectedAnswer === question.answer) {
 
             score++;
+
         }
+
     });
 
 
-    /* Don't submit incomplete quiz */
+    /* Do not submit if questions are unanswered */
+
     if (unanswered > 0) {
 
-        alert(
-            quizText[currentLanguage].unanswered
-        );
+        const result =
+            document.getElementById("quiz-result");
+
+        result.textContent =
+            `Please answer all ${questions.length} questions before submitting. ${unanswered} question(s) remaining.`;
+
+        result.classList.add("show");
+
+        result.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
 
         return;
     }
 
 
-    /* =========================================
-       SAVE COMPLETED SUBJECT
-       ========================================= */
+    /* Save progress */
 
-    let progress =
-        JSON.parse(
-            localStorage.getItem(
-                "brightLearnQuizProgress"
-            ) || "{}"
+    progressData[subject].completed = true;
+
+    progressData[subject].score = score;
+
+    saveProgress();
+
+
+    /* Show result */
+
+    const percentage =
+        Math.round(
+            (score / questions.length) * 100
         );
-
-
-    progress[subject] = true;
-
-
-    localStorage.setItem(
-        "brightLearnQuizProgress",
-        JSON.stringify(progress)
-    );
-
-
-    /* =========================================
-       DISPLAY RESULT
-       ========================================= */
 
     const result =
-        document.getElementById(
-            "result-" + subject
-        );
+        document.getElementById("quiz-result");
+
+    result.textContent =
+        `${quizData[subject].name}: You scored ${score}/${questions.length} (${percentage}%). Quiz completed successfully!`;
+
+    result.classList.add("show");
 
 
-    if (result) {
-
-        result.innerHTML =
-            "<strong>" +
-            quizText[currentLanguage].completed +
-            "</strong><br>" +
-            quizText[currentLanguage].score +
-            ": " +
-            score +
-            " / " +
-            questions.length;
-    }
-
-
-    /* =========================================
-       UPDATE DASHBOARD
-       ========================================= */
+    /* Update dashboard */
 
     updateDashboard();
 
-    updateCourseStatuses();
+
+    /* Update selected subject progress */
+
+    updateCourseProgress(subject);
+
+
+    result.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
 }
 
 
 /* =========================================================
    UPDATE DASHBOARD
-   ========================================================= */
+========================================================= */
 
 function updateDashboard() {
-
-    const progress =
-        JSON.parse(
-            localStorage.getItem(
-                "brightLearnQuizProgress"
-            ) || "{}"
-        );
-
 
     const subjects = [
         "cs",
@@ -1143,327 +908,425 @@ function updateDashboard() {
     ];
 
 
-    let completed = 0;
+    let completedCount = 0;
 
 
     subjects.forEach(function(subject) {
 
-        if (progress[subject] === true) {
+        if (progressData[subject].completed) {
 
-            completed++;
+            completedCount++;
+
         }
+
     });
 
 
-    const totalSubjects =
-        subjects.length;
-
+    /* EXACT calculation:
+       4 subjects = 100%
+       1 subject = 25%
+       2 subjects = 50%
+       3 subjects = 75%
+       0 subjects = 0%
+    */
 
     const percentage =
         Math.round(
-            (completed / totalSubjects) * 100
+            (completedCount / subjects.length) * 100
         );
 
 
-    /* =========================================
-       COMPLETED QUIZZES
-       ========================================= */
+    /* Completed quizzes */
 
-    document
-        .querySelectorAll(
-            "#completed-count"
-        )
-        .forEach(function(element) {
+    const completedElement =
+        document.getElementById("completed-count");
 
-            element.textContent =
-                completed;
-        });
+    if (completedElement) {
+
+        completedElement.textContent =
+            completedCount;
+
+    }
 
 
-    /* =========================================
-       OVERALL PROGRESS
-       ========================================= */
+    /* Overall percentage */
 
-    document
-        .querySelectorAll(
-            "#progress-percent"
-        )
-        .forEach(function(element) {
+    const percentageElement =
+        document.getElementById("progress-percent");
 
-            element.textContent =
-                percentage + "%";
-        });
+    if (percentageElement) {
+
+        percentageElement.textContent =
+            `${percentage}%`;
+
+    }
 
 
-    /*
-       Some versions of the dashboard may use
-       a different ID for the second percentage.
-       Update those too.
-    */
+    /* Dashboard progress percentage */
 
-    document
-        .querySelectorAll(
-            "#progress-percentage"
-        )
-        .forEach(function(element) {
+    const dashboardValue =
+        document.getElementById(
+            "dashboard-progress-value"
+        );
 
-            element.textContent =
-                percentage + "%";
-        });
+    if (dashboardValue) {
+
+        dashboardValue.textContent =
+            `${percentage}%`;
+
+    }
 
 
-    document
-        .querySelectorAll(
-            "#progress-value"
-        )
-        .forEach(function(element) {
+    /* Progress bar */
 
-            element.textContent =
-                percentage + "%";
-        });
+    const progressFill =
+        document.getElementById("progress-fill");
 
+    if (progressFill) {
 
-    document
-        .querySelectorAll(
-            ".progress-percent"
-        )
-        .forEach(function(element) {
+        progressFill.style.width =
+            `${percentage}%`;
 
-            element.textContent =
-                percentage + "%";
-        });
+    }
 
 
-    document
-        .querySelectorAll(
-            ".progress-percentage"
-        )
-        .forEach(function(element) {
+    /* Progress text */
 
-            element.textContent =
-                percentage + "%";
-        });
+    const progressText =
+        document.getElementById("progress-text");
 
+    if (progressText) {
 
-    /* =========================================
-       PROGRESS BAR
-       ========================================= */
+        progressText.textContent =
+            `${completedCount} of 4 subjects completed`;
 
-    document
-        .querySelectorAll(
-            "#progress-fill"
-        )
-        .forEach(function(element) {
-
-            element.style.width =
-                percentage + "%";
-        });
+    }
 
 
-    document
-        .querySelectorAll(
-            ".progress-fill"
-        )
-        .forEach(function(element) {
+    /* Achievement */
 
-            element.style.width =
-                percentage + "%";
-        });
+    const achievement =
+        document.getElementById("achievement-text");
 
+    if (achievement) {
 
-    /* =========================================
-       PROGRESS DESCRIPTION
-       ========================================= */
+        if (completedCount === 0) {
 
-    document
-        .querySelectorAll(
-            "#progress-text"
-        )
-        .forEach(function(element) {
+            achievement.textContent =
+                "Start your learning journey!";
 
-            element.textContent =
-                completed +
-                " of " +
-                totalSubjects +
-                " subjects completed";
-        });
+        } else if (completedCount === 1) {
 
+            achievement.textContent =
+                "Great start! Keep learning.";
 
-    /* =========================================
-       EXTRA FIX FOR PROGRESS HEADER
-       ========================================= */
+        } else if (completedCount === 2) {
 
-    /*
-       If the percentage shown beside "Progress"
-       is inside a progress header, update it too.
-    */
+            achievement.textContent =
+                "Good progress! Keep going.";
 
-    document
-        .querySelectorAll(
-            ".progress-header span"
-        )
-        .forEach(function(element) {
+        } else if (completedCount === 3) {
 
-            const text =
-                element.textContent.trim();
+            achievement.textContent =
+                "Almost there! One more subject.";
 
-            if (
-                text === "0%" ||
-                text === "25%" ||
-                text === "50%" ||
-                text === "75%" ||
-                text === "100%"
-            ) {
+        } else {
 
-                element.textContent =
-                    percentage + "%";
-            }
-        });
+            achievement.textContent =
+                "Excellent! All subjects completed! 🎉";
+
+        }
+
+    }
 
 
-    /* =========================================
-       ACHIEVEMENT
-       ========================================= */
+    /* Update every subject */
 
-    document
-        .querySelectorAll(
-            "#achievement-text"
-        )
-        .forEach(function(element) {
+    subjects.forEach(function(subject) {
 
-            if (percentage === 100) {
+        updateCourseProgress(subject);
 
-                element.textContent =
-                    "Excellent! You completed all subjects.";
+        updateSubjectStatus(subject);
 
-            } else if (percentage > 0) {
+    });
 
-                element.textContent =
-                    "Great progress! Keep learning.";
-
-            } else {
-
-                element.textContent =
-                    "Start a quiz to begin your learning progress.";
-            }
-        });
 }
 
 
 /* =========================================================
-   UPDATE COURSE STATUS
-   ========================================================= */
+   UPDATE COURSE PROGRESS
+========================================================= */
 
-function updateCourseStatuses() {
+function updateCourseProgress(subject) {
 
-    const progress =
-        JSON.parse(
-            localStorage.getItem(
-                "brightLearnQuizProgress"
-            ) || "{}"
+    const completed =
+        progressData[subject].completed;
+
+    const percentage =
+        completed ? 100 : 0;
+
+
+    const percentageElement =
+        document.getElementById(
+            `course-progress-${subject}`
+        );
+
+    const fillElement =
+        document.getElementById(
+            `course-fill-${subject}`
         );
 
 
-    const statusMap = {
+    if (percentageElement) {
 
-        cs: "status-cs",
+        percentageElement.textContent =
+            `${percentage}%`;
 
-        math: "status-math",
-
-        science: "status-science",
-
-        communication: "status-communication"
-    };
+    }
 
 
-    Object.keys(statusMap).forEach(
-        function(subject) {
+    if (fillElement) {
 
-            const status =
+        fillElement.style.width =
+            `${percentage}%`;
+
+    }
+
+}
+
+
+/* =========================================================
+   UPDATE SUBJECT STATUS
+========================================================= */
+
+function updateSubjectStatus(subject) {
+
+    const statusElement =
+        document.getElementById(
+            `status-${subject}`
+        );
+
+    const scoreElement =
+        document.getElementById(
+            `score-${subject}`
+        );
+
+
+    if (!statusElement || !scoreElement) {
+        return;
+    }
+
+
+    if (progressData[subject].completed) {
+
+        statusElement.textContent =
+            "Completed ✓";
+
+        const score =
+            progressData[subject].score;
+
+        const total =
+            quizData[subject].questions.length;
+
+        const percentage =
+            Math.round(
+                (score / total) * 100
+            );
+
+        scoreElement.textContent =
+            `Score: ${score}/${total} (${percentage}%)`;
+
+    } else {
+
+        statusElement.textContent =
+            "Not Completed";
+
+        scoreElement.textContent =
+            "Quiz not attempted";
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+function toggleMenu() {
+
+    const nav =
+        document.getElementById("nav-links");
+
+    if (nav) {
+
+        nav.classList.toggle("active");
+
+    }
+
+}
+
+
+function closeMenu() {
+
+    const nav =
+        document.getElementById("nav-links");
+
+    if (nav) {
+
+        nav.classList.remove("active");
+
+    }
+
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+function setupLogin() {
+
+    const form =
+        document.getElementById("login-form");
+
+    if (!form) {
+        return;
+    }
+
+    form.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+            const name =
                 document.getElementById(
-                    statusMap[subject]
+                    "login-name"
+                ).value.trim();
+
+            const result =
+                document.getElementById(
+                    "login-result"
                 );
 
+            if (name) {
 
-            if (!status) {
-                return;
+                result.textContent =
+                    `Welcome, ${name}! You have successfully logged in to BrightLearn.`;
+
+                form.reset();
+
             }
 
-
-            if (progress[subject] === true) {
-
-                status.textContent =
-                    "Completed";
-
-                status.classList.add(
-                    "completed"
-                );
-
-            } else {
-
-                status.textContent =
-                    "Not Started";
-
-                status.classList.remove(
-                    "completed"
-                );
-            }
         }
     );
+
 }
 
 
 /* =========================================================
-   START COURSE
-   ========================================================= */
+   FEEDBACK
+========================================================= */
 
-function startCourse(subject) {
+function setupFeedback() {
 
-    const selector =
+    const form =
         document.getElementById(
-            "quiz-subject"
+            "feedback-form"
         );
 
-
-    if (selector) {
-
-        selector.value =
-            subject;
+    if (!form) {
+        return;
     }
 
+    form.addEventListener(
+        "submit",
+        function(event) {
 
-    showSelectedQuiz(subject);
+            event.preventDefault();
 
+            const result =
+                document.getElementById(
+                    "feedback-result"
+                );
 
-    const quizSection =
-        document.getElementById(
-            "quiz"
-        );
+            result.textContent =
+                "Thank you for your feedback! Your response has been received.";
 
+            form.reset();
 
-    if (quizSection) {
+        }
+    );
 
-        quizSection.scrollIntoView({
-            behavior: "smooth"
-        });
-    }
 }
 
 
 /* =========================================================
    LANGUAGE CHANGE
-   ========================================================= */
+========================================================= */
 
 function changeLanguage(language) {
 
-    if (!quizText[language]) {
+    const selected =
+        translations[language];
 
-        language = "en";
+    if (!selected) {
+        return;
     }
 
 
-    currentLanguage =
-        language;
+    const heroSubtitle =
+        document.getElementById(
+            "hero-subtitle"
+        );
+
+    const heroDescription =
+        document.getElementById(
+            "hero-description"
+        );
+
+    const exploreButton =
+        document.getElementById(
+            "explore-btn"
+        );
+
+    const learnMoreButton =
+        document.getElementById(
+            "learn-more-btn"
+        );
+
+
+    if (heroSubtitle) {
+
+        heroSubtitle.textContent =
+            selected.heroSubtitle;
+
+    }
+
+
+    if (heroDescription) {
+
+        heroDescription.textContent =
+            selected.heroDescription;
+
+    }
+
+
+    if (exploreButton) {
+
+        exploreButton.textContent =
+            selected.explore;
+
+    }
+
+
+    if (learnMoreButton) {
+
+        learnMoreButton.textContent =
+            selected.learnMore;
+
+    }
 
 
     localStorage.setItem(
@@ -1471,426 +1334,79 @@ function changeLanguage(language) {
         language
     );
 
+}
+
+
+/* =========================================================
+   LOAD SAVED LANGUAGE
+========================================================= */
+
+function loadSavedLanguage() {
+
+    const savedLanguage =
+        localStorage.getItem(
+            "brightLearnLanguage"
+        );
 
     const selector =
         document.getElementById(
             "language-selector"
         );
 
-
-    if (selector) {
+    if (
+        savedLanguage &&
+        translations[savedLanguage] &&
+        selector
+    ) {
 
         selector.value =
-            language;
-    }
+            savedLanguage;
 
-
-    updatePageTranslations();
-
-
-    /* Update all submit buttons */
-    document
-        .querySelectorAll(
-            ".quiz-submit"
-        )
-        .forEach(function(button) {
-
-            button.textContent =
-                quizText[language].submit;
-        });
-}
-
-
-/* =========================================================
-   PAGE TRANSLATIONS
-   ========================================================= */
-
-const translations = {
-
-    en: {
-
-        "hero-tagline":
-            "Learn Today. Build Tomorrow.",
-
-        "hero-title":
-            "Quality Education for Everyone",
-
-        "hero-description":
-            "Learn, explore and grow with simple and accessible digital education.",
-
-        "hero-button":
-            "Explore Courses",
-
-        "about-title":
-            "About BrightLearn",
-
-        "resources-title":
-            "Learning Resources",
-
-        "courses-title":
-            "Our Courses",
-
-        "dashboard-title":
-            "Your Learning Dashboard",
-
-        "profile-title":
-            "Student Profile",
-
-        "login-title":
-            "Login",
-
-        "quiz-title":
-            "Subject Quiz",
-
-        "contact-title":
-            "Contact & Feedback"
-    },
-
-
-    gu: {
-
-        "hero-tagline":
-            "આજે શીખો. આવતીકાલ બનાવો.",
-
-        "hero-title":
-            "દરેક માટે ગુણવત્તાયુક્ત શિક્ષણ",
-
-        "hero-description":
-            "સરળ અને સુલભ ડિજિટલ શિક્ષણ સાથે શીખો, શોધો અને વિકાસ કરો.",
-
-        "hero-button":
-            "કોર્સ જુઓ",
-
-        "about-title":
-            "BrightLearn વિશે",
-
-        "resources-title":
-            "શૈક્ષણિક સંસાધનો",
-
-        "courses-title":
-            "અમારા કોર્સ",
-
-        "dashboard-title":
-            "તમારું લર્નિંગ ડેશબોર્ડ",
-
-        "profile-title":
-            "વિદ્યાર્થી પ્રોફાઇલ",
-
-        "login-title":
-            "લૉગિન",
-
-        "quiz-title":
-            "વિષય ક્વિઝ",
-
-        "contact-title":
-            "સંપર્ક અને પ્રતિસાદ"
-    },
-
-
-    hi: {
-
-        "hero-tagline":
-            "आज सीखें। कल बनाएं।",
-
-        "hero-title":
-            "सभी के लिए गुणवत्तापूर्ण शिक्षा",
-
-        "hero-description":
-            "सरल और सुलभ डिजिटल शिक्षा के साथ सीखें, खोजें और आगे बढ़ें।",
-
-        "hero-button":
-            "कोर्स देखें",
-
-        "about-title":
-            "BrightLearn के बारे में",
-
-        "resources-title":
-            "शैक्षिक संसाधन",
-
-        "courses-title":
-            "हमारे कोर्स",
-
-        "dashboard-title":
-            "आपका लर्निंग डैशबोर्ड",
-
-        "profile-title":
-            "विद्यार्थी प्रोफ़ाइल",
-
-        "login-title":
-            "लॉगिन",
-
-        "quiz-title":
-            "विषय क्विज़",
-
-        "contact-title":
-            "संपर्क और प्रतिक्रिया"
-    },
-
-
-    mr: {
-
-        "hero-tagline":
-            "आज शिका. उद्या घडवा.",
-
-        "hero-title":
-            "सर्वांसाठी गुणवत्तापूर्ण शिक्षण",
-
-        "hero-description":
-            "सोप्या आणि सुलभ डिजिटल शिक्षणासह शिका, शोधा आणि प्रगती करा.",
-
-        "hero-button":
-            "अभ्यासक्रम पहा",
-
-        "about-title":
-            "BrightLearn बद्दल",
-
-        "resources-title":
-            "शैक्षणिक संसाधने",
-
-        "courses-title":
-            "आमचे अभ्यासक्रम",
-
-        "dashboard-title":
-            "तुमचे लर्निंग डॅशबोर्ड",
-
-        "profile-title":
-            "विद्यार्थी प्रोफाइल",
-
-        "login-title":
-            "लॉगिन",
-
-        "quiz-title":
-            "विषय क्विझ",
-
-        "contact-title":
-            "संपर्क आणि अभिप्राय"
-    },
-
-
-    bn: {
-
-        "hero-tagline":
-            "আজ শিখুন। আগামীকাল গড়ুন।",
-
-        "hero-title":
-            "সবার জন্য মানসম্মত শিক্ষা",
-
-        "hero-description":
-            "সহজ এবং অ্যাক্সেসযোগ্য ডিজিটাল শিক্ষার মাধ্যমে শিখুন, অন্বেষণ করুন এবং এগিয়ে যান।",
-
-        "hero-button":
-            "কোর্স দেখুন",
-
-        "about-title":
-            "BrightLearn সম্পর্কে",
-
-        "resources-title":
-            "শিক্ষামূলক সম্পদ",
-
-        "courses-title":
-            "আমাদের কোর্স",
-
-        "dashboard-title":
-            "আপনার লার্নিং ড্যাশবোর্ড",
-
-        "profile-title":
-            "শিক্ষার্থী প্রোফাইল",
-
-        "login-title":
-            "লগইন",
-
-        "quiz-title":
-            "বিষয় কুইজ",
-
-        "contact-title":
-            "যোগাযোগ ও মতামত"
-    },
-
-
-    ta: {
-
-        "hero-tagline":
-            "இன்று கற்றுக்கொள்ளுங்கள். நாளையை உருவாக்குங்கள்.",
-
-        "hero-title":
-            "அனைவருக்கும் தரமான கல்வி",
-
-        "hero-description":
-            "எளிய மற்றும் அணுகக்கூடிய டிஜிட்டல் கல்வியுடன் கற்றுக்கொள்ளுங்கள், ஆராயுங்கள் மற்றும் வளருங்கள்.",
-
-        "hero-button":
-            "பாடங்களைப் பார்க்கவும்",
-
-        "about-title":
-            "BrightLearn பற்றி",
-
-        "resources-title":
-            "கல்வி வளங்கள்",
-
-        "courses-title":
-            "எங்கள் பாடங்கள்",
-
-        "dashboard-title":
-            "உங்கள் கற்றல் டாஷ்போர்டு",
-
-        "profile-title":
-            "மாணவர் சுயவிவரம்",
-
-        "login-title":
-            "உள்நுழைவு",
-
-        "quiz-title":
-            "பாட வினாடி வினா",
-
-        "contact-title":
-            "தொடர்பு மற்றும் கருத்து"
-    }
-};
-
-
-/* =========================================================
-   UPDATE PAGE TRANSLATIONS
-   ========================================================= */
-
-function updatePageTranslations() {
-
-    const language =
-        translations[currentLanguage];
-
-
-    if (!language) {
-        return;
-    }
-
-
-    Object.keys(language).forEach(
-        function(id) {
-
-            const element =
-                document.getElementById(id);
-
-
-            if (element) {
-
-                element.textContent =
-                    language[id];
-            }
-        }
-    );
-}
-
-
-/* =========================================================
-   LOGIN
-   ========================================================= */
-
-function handleLogin(event) {
-
-    if (event) {
-
-        event.preventDefault();
-    }
-
-
-    const loginMessage =
-        document.getElementById(
-            "login-message"
+        changeLanguage(
+            savedLanguage
         );
 
-
-    if (loginMessage) {
-
-        loginMessage.textContent =
-            "Demo login successful!";
     }
+
 }
 
 
 /* =========================================================
-   FEEDBACK
-   ========================================================= */
-
-function handleFeedback(event) {
-
-    if (event) {
-
-        event.preventDefault();
-    }
-
-
-    const feedbackMessage =
-        document.getElementById(
-            "feedback-message"
-        );
-
-
-    if (feedbackMessage) {
-
-        feedbackMessage.textContent =
-            "Thank you for your feedback!";
-    }
-}
-
-
-/* =========================================================
-   PAGE LOAD
-   ========================================================= */
+   INITIALIZE WEBSITE
+========================================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
     function() {
 
-        /* Generate all quizzes */
-        generateAllQuizzes();
+        /* Create all 60 quiz questions */
+
+        createAllQuizzes();
 
 
-        /* Set language */
-        const languageSelector =
-            document.getElementById(
-                "language-selector"
-            );
+        /* Initially show no quiz */
+
+        showSelectedQuiz("");
 
 
-        if (languageSelector) {
+        /* Load saved dashboard progress */
 
-            languageSelector.value =
-                currentLanguage;
-        }
-
-
-        /* Update language */
-        updatePageTranslations();
-
-
-        /* Update dashboard */
         updateDashboard();
 
 
-        /* Update course status */
-        updateCourseStatuses();
+        /* Setup login */
+
+        setupLogin();
 
 
-        /* =========================================
-           SUBJECT DROPDOWN
-           ========================================= */
+        /* Setup feedback */
 
-        const quizSubject =
-            document.getElementById(
-                "quiz-subject"
-            );
+        setupFeedback();
 
 
-        if (quizSubject) {
+        /* Load language */
 
-            quizSubject.addEventListener(
-                "change",
-                function() {
+        loadSavedLanguage();
 
-                    showSelectedQuiz(
-                        this.value
-                    );
-                }
-            );
-        }
     }
 );
