@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BrightLearn - Quality Education</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>BrightLearn</span>
+            <small>Quality Education</small>
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <ul class="nav-links">
+
+            <li><a href="#home" data-i18n="home">Home</a></li>
+            <li><a href="#about" data-i18n="about">About</a></li>
+            <li><a href="#resources" data-i18n="resources">Resources</a></li>
+            <li><a href="#courses" data-i18n="courses">Courses</a></li>
+            <li><a href="#dashboard" data-i18n="dashboard">Dashboard</a></li>
+            <li><a href="#profile" data-i18n="profile">Profile</a></li>
+            <li><a href="#login" data-i18n="login">Login</a></li>
+            <li><a href="#quiz" data-i18n="quiz">Quiz</a></li>
+            <li><a href="#contact" data-i18n="contact">Contact</a></li>
+
+            <li class="language-box">
+                <select id="language-selector" onchange="changeLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="gu">ગુજરાતી</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="mr">मराठी</option>
+                    <option value="bn">বাংলা</option>
+                    <option value="ta">தமிழ்</option>
+                </select>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="tagline" data-i18n="tagline">
+                Learn Today. Build Tomorrow.
+            </p>
+
+            <h1 data-i18n="heroTitle">
+                Quality Education for Everyone
+            </h1>
+
+            <p data-i18n="heroText">
+                BrightLearn is a student-friendly platform that provides
+                accessible learning resources, interactive quizzes and
+                automatic progress tracking.
+            </p>
+
+            <a href="#courses" class="btn" data-i18n="exploreCourses">
+                Explore Courses
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECT INFORMATION ================= -->
+
+    <section class="section" id="about">
+
+        <div class="container">
+
+            <h2 data-i18n="projectInformation">
+                Project Information
+            </h2>
+
+            <div class="info-grid">
+
+                <div class="info-card">
+                    <h3 data-i18n="goal">Goal</h3>
+
+                    <p data-i18n="goalText">
+                        Promote quality and accessible education for students.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3 data-i18n="students">Students</h3>
+
+                    <p data-i18n="studentsText">
+                        Designed for school and college students.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3 data-i18n="technology">Technology</h3>
+
+                    <p data-i18n="technologyText">
+                        HTML, CSS and JavaScript.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="section light-section">
+
+        <div class="container">
+
+            <h2 data-i18n="aboutBrightLearn">
+                About BrightLearn
+            </h2>
+
+            <p class="center-text" data-i18n="aboutText">
+                BrightLearn supports students with simple learning resources
+                and interactive activities.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="icon">📚</div>
+
+                    <h3 data-i18n="learningResources">
+                        Learning Resources
+                    </h3>
+
+                    <p data-i18n="learningResourcesText">
+                        Access useful educational platforms and study materials.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="icon">🎯</div>
+
+                    <h3 data-i18n="interactiveLearning">
+                        Interactive Learning
+                    </h3>
+
+                    <p data-i18n="interactiveLearningText">
+                        Test your knowledge through subject-based quizzes.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="icon">📊</div>
+
+                    <h3 data-i18n="automaticProgress">
+                        Automatic Progress
+                    </h3>
+
+                    <p data-i18n="automaticProgressText">
+                        Your progress is automatically updated after completing quizzes.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY QUALITY EDUCATION ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2 data-i18n="whyQualityEducation">
+                Why Quality Education?
+            </h2>
+
+            <div class="why-list">
+
+                <div>
+                    <span>✓</span>
+                    <p data-i18n="why1">
+                        Provides equal learning opportunities.
+                    </p>
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    <p data-i18n="why2">
+                        Improves knowledge and skills.
+                    </p>
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    <p data-i18n="why3">
+                        Builds confidence and creativity.
+                    </p>
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    <p data-i18n="why4">
+                        Supports personal and career development.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RESOURCES ================= -->
+
+    <section class="section light-section" id="resources">
+
+        <div class="container">
+
+            <h2 data-i18n="learningResourcesTitle">
+                Learning Resources
+            </h2>
+
+            <div class="resource-grid">
+
+                <div class="resource-card">
+
+                    <div class="resource-icon">🎓</div>
+
+                    <h3>Khan Academy</h3>
+
+                    <p>
+                        Free educational lessons and practice.
+                    </p>
+
+                    <a
+                        href="https://www.khanacademy.org/"
+                        target="_blank"
+                        class="btn small-btn"
+                        data-i18n="visitResource">
+                        Visit Resource
+                    </a>
+
+                </div>
+
+
+                <div class="resource-card">
+
+                    <div class="resource-icon">▶️</div>
+
+                    <h3>YouTube Education</h3>
+
+                    <p>
+                        Educational videos and learning content.
+                    </p>
+
+                    <a
+                        href="https://www.youtube.com/education"
+                        target="_blank"
+                        class="btn small-btn"
+                        data-i18n="visitResource">
+                        Visit Resource
+                    </a>
+
+                </div>
+
+
+                <div class="resource-card">
+
+                    <div class="resource-icon">🌐</div>
+
+                    <h3>SWAYAM</h3>
+
+                    <p>
+                        Online courses and learning opportunities.
+                    </p>
+
+                    <a
+                        href="https://swayam.gov.in/"
+                        target="_blank"
+                        class="btn small-btn"
+                        data-i18n="visitResource">
+                        Visit Resource
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COURSES ================= -->
+
+    <section class="section" id="courses">
+
+        <div class="container">
+
+            <h2 data-i18n="coursesTitle">
+                Courses
+            </h2>
+
+            <div class="course-grid">
+
+
+                <!-- COMPUTER SCIENCE -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">💻</div>
+
+                    <h3 data-i18n="computerScience">
+                        Computer Science
+                    </h3>
+
+                    <p>
+                        Learn basic computer science concepts.
+                    </p>
+
+                    <div class="course-progress">
+
+                        <div class="progress-bar">
+                            <div
+                                class="progress-fill"
+                                id="course-progress-cs">
+                            </div>
+                        </div>
+
+                        <span id="course-percent-cs">0%</span>
+
+                    </div>
+
+                    <button
+                        class="btn"
+                        onclick="startCourse('cs')"
+                        data-i18n="startCourse">
+                        Start Quiz
+                    </button>
+
+                </div>
+
+
+                <!-- MATHEMATICS -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">📐</div>
+
+                    <h3 data-i18n="mathematics">
+                        Mathematics
+                    </h3>
+
+                    <p>
+                        Practice basic mathematical concepts.
+                    </p>
+
+                    <div class="course-progress">
+
+                        <div class="progress-bar">
+                            <div
+                                class="progress-fill"
+                                id="course-progress-math">
+                            </div>
+                        </div>
+
+                        <span id="course-percent-math">0%</span>
+
+                    </div>
+
+                    <button
+                        class="btn"
+                        onclick="startCourse('math')"
+                        data-i18n="startCourse">
+                        Start Quiz
+                    </button>
+
+                </div>
+
+
+                <!-- SCIENCE -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">🔬</div>
+
+                    <h3 data-i18n="science">
+                        Science
+                    </h3>
+
+                    <p>
+                        Explore basic science concepts.
+                    </p>
+
+                    <div class="course-progress">
+
+                        <div class="progress-bar">
+                            <div
+                                class="progress-fill"
+                                id="course-progress-science">
+                            </div>
+                        </div>
+
+                        <span id="course-percent-science">0%</span>
+
+                    </div>
+
+                    <button
+                        class="btn"
+                        onclick="startCourse('science')"
+                        data-i18n="startCourse">
+                        Start Quiz
+                    </button>
+
+                </div>
+
+
+                <!-- COMMUNICATION -->
+
+                <div class="course-card">
+
+                    <div class="course-icon">🗣️</div>
+
+                    <h3 data-i18n="communication">
+                        Communication
+                    </h3>
+
+                    <p>
+                        Improve communication and listening skills.
+                    </p>
+
+                    <div class="course-progress">
+
+                        <div class="progress-bar">
+                            <div
+                                class="progress-fill"
+                                id="course-progress-communication">
+                            </div>
+                        </div>
+
+                        <span id="course-percent-communication">0%</span>
+
+                    </div>
+
+                    <button
+                        class="btn"
+                        onclick="startCourse('communication')"
+                        data-i18n="startCourse">
+                        Start Quiz
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <section class="section dashboard-section" id="dashboard">
+
+        <div class="container">
+
+            <h2 data-i18n="dashboardTitle">
+                Student Dashboard
+            </h2>
+
+
+            <div class="dashboard-summary">
+
+                <div class="summary-card">
+
+                    <div class="summary-icon">📚</div>
+
+                    <h3 data-i18n="completedQuizzes">
+                        Completed Quizzes
+                    </h3>
+
+                    <strong id="completed-count">
+                        0 / 4
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon">📈</div>
+
+                    <h3 data-i18n="overallProgress">
+                        Overall Progress
+                    </h3>
+
+                    <strong id="progress-percent">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon">🏆</div>
+
+                    <h3 data-i18n="achievement">
+                        Achievement
+                    </h3>
+
+                    <strong id="achievement-text">
+                        Keep learning!
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="overall-progress-box">
+
+                <div class="progress-heading">
+
+                    <span data-i18n="progress">
+                        Progress
+                    </span>
+
+                    <span id="progress-percent-2">
+                        0%
+                    </span>
+
+                </div>
+
+                <div class="big-progress-bar">
+
+                    <div
+                        class="big-progress-fill"
+                        id="progress-fill">
+                    </div>
+
+                </div>
+
+                <p
+                    id="progress-text"
+                    class="center-text">
+                    Complete subject quizzes to increase your progress.
+                </p>
+
+            </div>
+
+
+            <div class="task-list">
+
+
+                <div class="task-item">
+
+                    <div>
+                        <h3 data-i18n="computerScience">
+                            Computer Science
+                        </h3>
+
+                        <p>15 questions</p>
+                    </div>
+
+                    <span
+                        id="status-cs"
+                        class="task-status pending">
+                        Pending
+                    </span>
+
+                </div>
+
+
+                <div class="task-item">
+
+                    <div>
+                        <h3 data-i18n="mathematics">
+                            Mathematics
+                        </h3>
+
+                        <p>15 questions</p>
+                    </div>
+
+                    <span
+                        id="status-math"
+                        class="task-status pending">
+                        Pending
+                    </span>
+
+                </div>
+
+
+                <div class="task-item">
+
+                    <div>
+                        <h3 data-i18n="science">
+                            Science
+                        </h3>
+
+                        <p>15 questions</p>
+                    </div>
+
+                    <span
+                        id="status-science"
+                        class="task-status pending">
+                        Pending
+                    </span>
+
+                </div>
+
+
+                <div class="task-item">
+
+                    <div>
+                        <h3 data-i18n="communication">
+                            Communication
+                        </h3>
+
+                        <p>15 questions</p>
+                    </div>
+
+                    <span
+                        id="status-communication"
+                        class="task-status pending">
+                        Pending
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="automatic-note"
+                data-i18n="automaticNote">
+                Progress is automatically updated when you submit a quiz.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROFILE ================= -->
+
+    <section class="section" id="profile">
+
+        <div class="container">
+
+            <h2 data-i18n="profileTitle">
+                Student Profile
+            </h2>
+
+            <div class="profile-card">
+
+                <div class="profile-avatar">
+                    👩‍🎓
+                </div>
+
+                <h3 id="profile-name">
+                    Srushti Ghori
+                </h3>
+
+                <p>
+                    <strong data-i18n="email">
+                        Email
+                    </strong>:
+                    <span id="profile-email">
+                        Not logged in
+                    </span>
+                </p>
+
+                <p>
+                    <strong data-i18n="status">
+                        Status
+                    </strong>:
+                    <span id="profile-status">
+                        Guest
+                    </span>
+                </p>
+
+                <button
+                    class="btn logout-btn"
+                    onclick="logoutStudent()"
+                    data-i18n="logout">
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LOGIN ================= -->
+
+    <section class="section light-section" id="login">
+
+        <div class="container">
+
+            <h2 data-i18n="loginTitle">
+                Student Login
+            </h2>
+
+
+            <form
+                id="login-form"
+                class="login-form">
+
+                <input
+                    type="text"
+                    id="login-name"
+                    placeholder="Enter your name"
+                    data-i18n-placeholder="namePlaceholder"
+                    required>
+
+                <input
+                    type="email"
+                    id="login-email"
+                    placeholder="Enter your email"
+                    data-i18n-placeholder="emailPlaceholder"
+                    required>
+
+                <input
+                    type="password"
+                    id="login-password"
+                    placeholder="Enter password"
+                    data-i18n-placeholder="passwordPlaceholder"
+                    required>
+
+                <button
+                    type="submit"
+                    class="btn"
+                    data-i18n="loginButton">
+                    Login
+                </button>
+
+                <p id="login-result"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUIZ ================= -->
+
+    <section class="section quiz-section" id="quiz">
+
+        <div class="container">
+
+            <h2 data-i18n="quizTitle">
+                Subject Quiz
+            </h2>
+
+
+            <!-- SELECT SUBJECT -->
+
+            <div class="quiz-selector">
+
+                <label
+                    for="quiz-subject"
+                    data-i18n="selectSubject">
+                    Select Subject:
+                </label>
+
+                <select
+                    id="quiz-subject"
+                    onchange="showSelectedQuiz(this.value)">
+
+                    <option
+                        value=""
+                        data-i18n="chooseSubject">
+                        Choose Subject
+                    </option>
+
+                    <option
+                        value="cs"
+                        data-i18n="computerScience">
+                        Computer Science
+                    </option>
+
+                    <option
+                        value="math"
+                        data-i18n="mathematics">
+                        Mathematics
+                    </option>
+
+                    <option
+                        value="science"
+                        data-i18n="science">
+                        Science
+                    </option>
+
+                    <option
+                        value="communication"
+                        data-i18n="communication">
+                        Communication
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- =================================================
+                 IMPORTANT:
+                 These containers are EMPTY.
+                 JavaScript creates ALL 15 questions here.
+                 ================================================= -->
+
+
+            <div
+                id="quiz-cs"
+                class="quiz-subject"
+                style="display:none;">
+            </div>
+
+
+            <div
+                id="quiz-math"
+                class="quiz-subject"
+                style="display:none;">
+            </div>
+
+
+            <div
+                id="quiz-science"
+                class="quiz-subject"
+                style="display:none;">
+            </div>
+
+
+            <div
+                id="quiz-communication"
+                class="quiz-subject"
+                style="display:none;">
+            </div>
+
+
+            <div id="quiz-result"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="section light-section" id="contact">
+
+        <div class="container">
+
+            <h2 data-i18n="contactTitle">
+                Contact & Feedback
+            </h2>
+
+
+            <form
+                id="feedback-form"
+                class="feedback-form">
+
+                <input
+                    type="text"
+                    placeholder="Your name"
+                    required>
+
+
+                <input
+                    type="email"
+                    placeholder="Your email"
+                    required>
+
+
+                <textarea
+                    placeholder="Write your message..."
+                    data-i18n-placeholder="messagePlaceholder"
+                    required>
+                </textarea>
+
+
+                <button
+                    type="submit"
+                    class="btn"
+                    data-i18n="sendMessage">
+                    Send Message
+                </button>
+
+
+                <p id="feedback-result"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>BrightLearn</h3>
+
+            <p>
+                Quality Education
+            </p>
+
+            <p>
+                Learn Today. Build Tomorrow.
+            </p>
+
+            <p>
+                Created by Srushti Ghori
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
